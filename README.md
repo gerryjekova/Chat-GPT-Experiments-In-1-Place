@@ -1,7 +1,6 @@
-# ChatGPTExperimentsIn1Place
-All of my random ChatGPT experiments (Including my Custom GPTs), prompt library, generations and studies will be recorded here. (When I don't forget to write them in, ofcourse)
-
-
+### WELCOME TO MY CHATGPT EXPERIMENTS WORKSPACE V1 🤓⭐
+> All of my random ChatGPT experiments (Including my Custom GPTs), prompt library, generations and studies will be recorded here. (When I don't forget to write them in, ofcourse)
+--- 
 ## Prompt Highlights (Possible future templates) 
 ### Other Notable Prompts and Examples Will be Stored [In the Repository's Wiki](https://github.com/gerryjekova/ChatGPTExperimentsIn1Place/wiki) 
 ```
