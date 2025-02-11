@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerry's Public Resources</title>
+  <style>
+    /* Reset and box-sizing */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body with Night Sky background and star pattern overlay */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0a0a2a; /* Night Sky color */
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Star overlay - feel free to replace this with your own starry design */
+    .background-stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><text x="0" y="20" font-size="20" opacity="0.75">★</text></svg>') repeat;
+      opacity: 0.95;
+      z-index: 1;
+    }
+
+     /* GERRY changed in V2 */ 
+    .container {
+      position: relative;
+      z-index: 2;
+      width: 90%;           /* Responsive width */
+      max-width: 600px;     /* Maximum width to prevent stretching on large screens */
+      margin: 50px auto;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5); /* 50% opacity background */
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    /* Site title styling */
+    h1 {
+      margin-bottom: 20px;
+      color: #fff;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    /* Avatar placeholder styled as a circle */
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: #ccc;
+      margin: 0 auto 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #5BBCFF;
+      /* INSERT YOUR AVATAR IMAGE HERE (e.g., replace this div content with an <img> tag) */
+    }
+
+    /* GERRY changed in V2 */ 
+    .link-tree a {
+      display: block;
+      margin: 15px auto;
+      text-decoration: none;
+      width: 100%;  /* Now the buttons span the full width of the container */
+    }
+
+    /* Button styling */
+    .link-button {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #5BBCFF;
+      border-radius: 5px;
+      background-color: #FFD1E3;
+      color: #FF008E;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Hover effect for buttons */
+    .link-button:hover {
+      background-color: #FF7EE2;
+    }
+
+    /* Change text color for visited links (if applicable) */
+    a:visited .link-button {
+      color: #D5FFE4;
+    }
+  </style>
+</head>
+<body>
+  <!-- Starry background overlay -->
+  <div class="background-stars"></div>
+
+  <div class="container">
+    <h1>Gerry's Public Resources</h1>
+    
+    <div class="avatar">
+      <img src="assets/Screenshot 2025-02-04 221629.png" alt="Avatar" styles="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+    </div>
+    
+
+    <nav class="link-tree">
+      <!-- Button 1: Downloadable PDF -->
+      <a href="assets/Урок за ‘нещо програмистко’ Ниво начинаещо (Ъпдейтната).pdf" download>
+        <button class="link-button">
+          Урок за ‘нещо програмистко’ Ниво начинаещо (Ъпдейтната) - Изтегли PDF Директно
+        </button>
+      </a>
+      <!-- Button 2 -->
+      <a href="https://github.com/gerryjekova/wheel-of-fortune-return/wiki/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D0%B7%D0%B2%D0%B8%D0%BA%D0%B0%D1%82%D0%B5%D0%BB%D1%81%D1%82%D0%B2%D0%B0-%D0%B8-%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D1%8F" target="_blank">
+        <button class="link-button">
+          Колелото На Късмета - Правила и Описание
+        </button>
+      </a>
+      <!-- Button 3 -->
+      <a href="https://nerdy.fun/" target="_blank">
+        <button class="link-button">
+          Сайт за Полезни, Бързи и Безплатни Онлайн Инструменти и Ресурси
+        </button>
+      </a>
+      <!-- Button 4 -->
+      <a href="https://bit.ly/linktreediscordinvite" target="_blank">
+        <button class="link-button">
+          ПОКАНА ЗА ДИСКОРД ОБЩНОСТТА МИ
+        </button>
+      </a>
+      <!-- Button 5 -->
+      <a href="https://github.com/gerryjekova/Nerdy-Knowledgebase-EN" target="_blank">
+        <button class="link-button">
+          Базата Ми Данни/Блог, Където Записвам Статии за Нещата, Които Уча
+        </button>
+      </a>
+    </nav>
+  </div>
+
+  <script>
+
+    // JavaScript placeholder
+    // You can add interactive behavior here if needed.
+    // For example, you might want to track visited links or add animations.
+
+  </script>
+</body>
+</html>
