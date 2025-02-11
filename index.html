@@ -32,6 +32,23 @@
             border-radius: 30%;
             margin-top: -25px;
         }
+        input {
+            border-color:rgb(151, 47, 255) ;
+            border-style: double;
+            color: red;
+            font-family: fantasy;
+            font-size:medium;
+            height: 25px;
+            width: 65px;
+        }
+        button {
+background-color: rgb(0, 217, 255);
+color: red;
+font-weight: 800;
+border-style: dotted;
+border-width: 3PX;
+height: 30px;
+}
         .links a {
             display: block;
             padding: 10px;
@@ -53,8 +70,10 @@
             color: rgb(238, 255, 88);
             background: rgba(217, 167, 255, 0.806);
         }
+       
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="profile">
@@ -63,6 +82,31 @@
                 Your browser does not support the video tag.
             </video>
             <h2>🔗ЛИНКОВЕТЕ ЗА ПОСТОВЕТЕ ОТ ТОМБОЛАТА🎁</h2>
+            <div>
+                <!-- The text field -->
+    <input type="text" value="#maikati" id="mycopy">
+    
+    <!-- The button used to copy the text -->
+    <button onclick="myFunction()">⬅️ КОПИРАЙ 📋</button>
+    
+    <script>
+    function myFunction() {
+      /* Get the text field */
+      var copyText = document.getElementById("mycopy");
+    
+      /* Select the text field */
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); /* For mobile devices */
+    
+      /* Copy the text inside the text field */
+      document.execCommand("copy");
+    
+      /* Alert the copied text */
+      alert("Copied the text: " + copyText.value);
+    }
+    </script>
+    
+            </div>
         </div>
         <div class="links">
             <a href="Discord.gg" target="_blank">DISCORD 🟢 [+1] ⚠️задължително!⚠️ </a>
@@ -71,8 +115,10 @@
             <a href="#" target="_blank">FACEBOOK 🔵[+1]</a>
             <a href="#" target="_blank">INSTAGRAM 📸[+1] </a>
             <a href="#" target="_blank">FOLLOW ON TWITCH ☑️[+2]</a>
-            <a href="https://www.twitch.tv/products/casualnerdingtv" target="_blank"> SUBSCRIBE ON TWITCH ⭐[х2]</a>
+            <a href="https://www.twitch.tv/products/casualnerdingtv"> SUBSCRIBE ON TWITCH ⭐[х2]</a>
         </div>
+
+        
     </div>
 </body>
 </html>
