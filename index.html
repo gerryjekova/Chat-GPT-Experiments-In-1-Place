@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raffle Draw</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+        #participantsList { margin-top: 10px; list-style: none; padding: 0; }
+        .winner { font-size: 24px; font-weight: bold; color: green; margin-top: 20px; }
+        .participant-item { font-size: 18px; }
+    </style>
+</head>
+<body>
+    <h2>🎟️ JERRYS I 💗 MAIKA TI Raffle System 🎟️</h2>
+    
+    <input type="text" id="nameInput" placeholder="Enter name">
+    <input type="number" id="pointsInput" placeholder="Enter points">
+    <button onclick="addParticipant()">Add</button>
+    <button onclick="drawWinner()">Draw Winner</button>
+    <button onclick="resetRaffle()">Reset</button>
+    
+    <h3>Participants:</h3>
+    <ul id="participantsList"></ul>
+
+    <h3 class="winner" id="winnerDisplay"></h3>
+
+    <script>
+        let rafflePool = [];
+
+        function updateParticipantList() {
+            let list = document.getElementById("participantsList");
+            list.innerHTML = "";
+
+            let countEntries = {};
+            rafflePool.forEach(name => {
+                countEntries[name] = (countEntries[name] || 0) + 1;
+            });
+
+            for (let name in countEntries) {
+                let li = document.createElement("li");
+                li.className = "participant-item";
+                li.innerText = `${name} (${countEntries[name]} entries)`;
+                list.appendChild(li);
+            }
+        }
+
+        function addParticipant() {
+            let name = document.getElementById("nameInput").value.trim();
+            let points = parseInt(document.getElementById("pointsInput").value, 10);
+
+            if (!name || isNaN(points) || points <= 0) {
+                alert("Please enter a valid name and points greater than 0.");
+                return;
+            }
+
+            for (let i = 0; i < points; i++) {
+                rafflePool.push(name);
+            }
+
+            console.log("Current Raffle Pool:", rafflePool); // Debugging log
+
+            document.getElementById("nameInput").value = "";
+            document.getElementById("pointsInput").value = "";
+            updateParticipantList();
+        }
+
+        function drawWinner() {
+            if (rafflePool.length === 0) {
+                alert("No participants left in the raffle.");
+                return;
+            }
+
+            const winnerIndex = Math.floor(Math.random() * rafflePool.length);
+            const winner = rafflePool[winnerIndex];
+
+            // Remove ALL instances of the winner
+            rafflePool = rafflePool.filter(name => name !== winner);
+
+            console.log("Winner:", winner);
+            console.log("Updated Raffle Pool:", rafflePool); // Debugging log
+
+            document.getElementById("winnerDisplay").innerText = `🎉 Winner: ${winner} 🎉`;
+
+            updateParticipantList();
+        }
+
+        function resetRaffle() {
+            rafflePool = [];
+            document.getElementById("winnerDisplay").innerText = "";
+            updateParticipantList();
+        }
+    </script>
+</body>
+</html>
